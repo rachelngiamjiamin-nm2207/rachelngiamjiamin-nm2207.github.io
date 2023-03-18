@@ -1,0 +1,108 @@
+body{
+  background-color: black;
+  color: white;
+}
+
+.row{
+  height: 600px;
+}
+
+.column{
+  /* border: 3px solid white; */
+  border-radius: 10px;
+  float: left;
+  margin: 10px;
+  padding: 1em;
+  height: 100%;
+}
+
+h1{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+h2{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+p,ol{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+a{
+  color: yellow;
+}
+
+/*instruction panel*/
+#instructions{
+  width: 20%;
+}
+
+
+/*gameboard*/
+#main{
+  width: 45%;
+  background-color:rgb(84, 38, 28);
+  border: 0px;
+}
+
+#codepegs{
+  width: 70%;
+  border: 0px;
+  float: left;
+}
+
+#keypegs{
+  width: 10%;
+  height: 100%;
+  border: 0px;
+  float: right;
+}
+
+
+
+/*the individual pegs*/
+.emptycodepeg{              
+  border-radius: 50%;
+  background-color: rgb(71, 86, 94);
+}
+
+.emptykeypeg{
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+/*side board*/
+#side{
+  width: 20%;
+}
+
+/*the color selector*/
+.dot{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.dot:hover{
+  border: 1px solid white;
+}
+
+/*check code button*/
+button:first-of-type{
+  background-color: red;
+  border: 2px solid white;
+  color: white;
+  font-size: 25px;
+}

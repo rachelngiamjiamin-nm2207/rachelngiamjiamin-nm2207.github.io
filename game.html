@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <title>Mastermind</title>
+        <script defer type="text/javascript" src="appscripts/app.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column" id="instructions">
+                <h2>INSTRUCTIONS</h2>
+                <p>This is placeholder text from Wikipedia, will be replaced later on!</p>
+                <ol>
+                    <li>The codebreaker tries to guess the pattern, in both order and color, within eight to twelve turns.</li>
+                    <li>Each guess is made by placing a row of code pegs on the decoding board.</li>
+                    <li>Once placed, the codemaker provides feedback by placing from zero to four key pegs in the small holes of the row with the guess. </li>
+                    <li>A colored key peg is placed for each code peg from the guess which is correct in both color and position. </li>
+                    <li>A white key peg indicates the existence of a correct color code peg placed in the wrong position.</li>
+                    <li>If there are duplicate colors in the guess, they cannot all be awarded a key peg unless they correspond to the same number of duplicate colors in the hidden code. </li>
+                </ol>
+            </div>
+            <div class="column" id="main">
+                <h1>MASTERMIND</h1>
+                <p>View the word document on my concepts applied <a href="https://docs.google.com/document/d/1kVgoa-FjQVlk8fve50wtPYQ3yImiUc4vNGfwM6luguo/edit?usp=sharing"
+                    target="_blank">here</a>.</p>
+                <div class="row">
+                    <div class="column" id="codepegs"></div>
+                    <div class="column" id="keypegs">
+                    </div>
+                </div>
+            </div>
+            <div class="column" id="side">
+                <div class="coloredpegs">
+                    <span class="dot" id="red" style="background-color: red;"></span>
+                    <span class="dot" id="blue" style="background-color:blue;"></span>
+                    <span class="dot" id="green" style="background-color:green;"></span><br>
+                    <span class="dot" id="yellow" style="background-color:yellow;"></span>
+                    <span class="dot" id="purple" style="background-color:purple;"></span>
+                    <span class="dot" id="orange" style="background-color:orange;"></span>    
+                </div><br>
+
+                <button type="button" onclick="checkCode()">CHECK CODE</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -59,7 +59,7 @@ a{
   float: left;
 }
 
-#keypegs{
+#hintpegs{
   width: 10%;
   height: 100%;
   border: 0px;
@@ -74,9 +74,24 @@ a{
   background-color: rgb(71, 86, 94);
 }
 
-.emptykeypeg{
+.dot_codepeg{
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.dot_hintpeg{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 
@@ -87,15 +102,16 @@ a{
 }
 
 /*the color selector*/
-.dot{
-  width: 50px;
-  height: 50px;
+
+
+.dot_color{
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid black;
   display: inline-block;
 }
-
-.dot:hover{
+.dot_color:hover{
   border: 1px solid white;
 }
 

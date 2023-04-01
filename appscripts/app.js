@@ -94,3 +94,4 @@ $(document).ready(function(){ //executes once the page loads
         document.getElementById(colors[i]).addEventListener("click",colorDropper(colors[i]));
         //possible to change cursor to a color dropper??
     }
+});

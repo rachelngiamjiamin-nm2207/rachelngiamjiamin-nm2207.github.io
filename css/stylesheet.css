@@ -3,17 +3,65 @@ body{
   color: white;
 }
 
-.row{
-  height: 600px;
+.bigGrid{
+  display:grid;
+  width: 100%;
+  height: 100%;
+  grid-gap: 40px;
+  margin: 20px;
+  grid-template-columns: 350px 450px 350px;
 }
 
-.column{
-  /* border: 3px solid white; */
-  border-radius: 10px;
-  float: left;
+#instructions{
+  grid-column: 1;
   margin: 10px;
-  padding: 1em;
+}
+
+#main{
+  /* width: 45%; */
+  background-color:rgb(84, 38, 28);
+  /* border: 0px; */
+  grid-column: 2;
+}
+
+.mainGrid{
+  /* display:grid; */
+  /* display: table; */
+  width:100%;
   height: 100%;
+  grid-template-columns: 400px 250px;
+  grid-template-rows: repeat(7,60px);
+  display: flex;
+  justify-content: center;
+  /* table-layout: fixed; */
+}
+
+#codepegs{
+  grid-column: 1;
+  margin: 40px 10px 30px 40px;
+  /* display: table-row; */
+}
+
+#hintpegs{
+  grid-column: 2;
+  margin: 40px 40px 30px 10px;
+  /* display:table-row; */
+  align-items: space-evenly;
+}
+
+#side{
+  grid-column: 3;
+  margin-top:20px;
+}
+
+.hintRows{
+  margin: 8px 0px 8px 0px;
+  height: 70px;
+}
+
+.codeRows{
+  margin: 8px 0px 8px 0px;
+  height: 70px;
 }
 
 h1{
@@ -40,34 +88,6 @@ a{
   color: yellow;
 }
 
-/*instruction panel*/
-#instructions{
-  width: 20%;
-}
-
-
-/*gameboard*/
-#main{
-  width: 45%;
-  background-color:rgb(84, 38, 28);
-  border: 0px;
-}
-
-#codepegs{
-  width: 70%;
-  border: 0px;
-  float: left;
-}
-
-#hintpegs{
-  width: 10%;
-  height: 100%;
-  border: 0px;
-  float: right;
-}
-
-
-
 /*the individual pegs*/
 .emptycodepeg{              
   border-radius: 50%;
@@ -75,13 +95,15 @@ a{
 }
 
 .dot_codepeg{
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border: 1px solid black;
   display: inline-block;
+  /* display: table-cell; */
   margin-right: 15px;
   margin-bottom: 15px;
+  box-shadow: 1.5px 1.5px black inset;
 }
 
 .dot_hintpeg{
@@ -90,19 +112,11 @@ a{
   border-radius: 50%;
   border: 1px solid black;
   display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  margin-right: 7.5px;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px black inset;
+  vertical-align: middle;
 }
-
-
-
-/*side board*/
-#side{
-  width: 20%;
-}
-
-/*the color selector*/
-
 
 .dot_color{
   width: 60px;

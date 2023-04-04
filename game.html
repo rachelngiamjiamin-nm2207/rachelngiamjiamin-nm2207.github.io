@@ -9,40 +9,48 @@
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        <div class="row">
+        <div class="bigGrid">
             <div class="column" id="instructions">
                 <h2>INSTRUCTIONS</h2>
-                <p>This is placeholder text from Wikipedia, will be replaced later on!</p>
                 <ol>
-                    <li>The codebreaker tries to guess the pattern, in both order and color, within eight to twelve turns.</li>
-                    <li>Each guess is made by placing a row of code pegs on the decoding board.</li>
-                    <li>Once placed, the codemaker provides feedback by placing from zero to four key pegs in the small holes of the row with the guess. </li>
-                    <li>A colored key peg is placed for each code peg from the guess which is correct in both color and position. </li>
-                    <li>A white key peg indicates the existence of a correct color code peg placed in the wrong position.</li>
-                    <li>If there are duplicate colors in the guess, they cannot all be awarded a key peg unless they correspond to the same number of duplicate colors in the hidden code. </li>
+                    <li>Click on a color from the color board, and then click on the codepegs that you would like in that color.</li>
+                    <li>Once you have a code you would like to check, click the “CHECK CODE” button. Make sure to do so before the timer is up, or your answer will be automatically submitted.</li>
+                        <ul>
+                            <li>If the automatically submitted answer is uncomplete (some of the codepegs are still grey), the answer will be voided and no hint pegs will be given.</li>
+                        </ul>
+                    <li>Look at the color of the hint peg(s) given, and consider that in your next answer.</li>
+                        <ul>
+                            <li>Black hint peg: Correct color, correct position</li>
+                            <li>White hint peg: Correct color, wrong position</li>
+                        </ul>
+                    <li>Keep trying! You have a maximum of 7 rounds to crack the code. </li>
                 </ol>
             </div>
-            <div class="column" id="main">
-                <h1>MASTERMIND</h1>
-                <p>View the word document on my concepts applied <a href="https://docs.google.com/document/d/1kVgoa-FjQVlk8fve50wtPYQ3yImiUc4vNGfwM6luguo/edit?usp=sharing"
-                    target="_blank">here</a>.</p>
-                <div class="row">
-                    <div class="column" id="codepegs"></div>
-                    <div class="column" id="keypegs">
-                    </div>
-                </div>
+            <div class="mainGrid" id="main">
+                <div class="codepegsClass" id="codepegs"></div>
+                <div class="hintpegsClass" id="hintpegs"></div>
             </div>
             <div class="column" id="side">
                 <div class="coloredpegs">
-                    <span class="dot" id="red" style="background-color: red;"></span>
-                    <span class="dot" id="blue" style="background-color:blue;"></span>
-                    <span class="dot" id="green" style="background-color:green;"></span><br>
-                    <span class="dot" id="yellow" style="background-color:yellow;"></span>
-                    <span class="dot" id="purple" style="background-color:purple;"></span>
-                    <span class="dot" id="orange" style="background-color:orange;"></span>    
+                    <a class="dot_color" id="red" style="background-color: red;"></a>
+                    <a class="dot_color" id="blue" style="background-color:blue;"></a>
+                    <a class="dot_color" id="green" style="background-color:green;"></a><br>
+                    <a class="dot_color" id="yellow" style="background-color:yellow;"></a>
+                    <a class="dot_color" id="purple" style="background-color:purple;"></a>
+                    <a class="dot_color" id="orange" style="background-color:orange;"></a>    
                 </div><br>
 
-                <button type="button" onclick="checkCode()">CHECK CODE</button>
+                <button type="button" id = "checkButton">CHECK CODE</button><br><br>
+
+                <div class="diaryEntryLinks">
+                    <a href="https://docs.google.com/document/d/1kVgoa-FjQVlk8fve50wtPYQ3yImiUc4vNGfwM6luguo/edit?usp=sharing"
+                        target="_blank">Week 9 Diary Entry</a><br>
+                    <a href="https://docs.google.com/document/d/1bIAZsoqeXUPv_-ijsWO5IpGm8ybXPQUw_uK8f7_ZiiM/edit?usp=sharing"
+                        target="_blank">Week 10 Diary Entry</a><br>
+                    <a href="https://docs.google.com/document/d/1pN73fp7OIzDHzbyn4SgVsiRQI2e2p-kmDHfSRjnqVgM/edit?usp=sharing"
+                        target="_blank">Week 11 Diary Entry</a>
+                </div>
+
             </div>
         </div>
     </body>
